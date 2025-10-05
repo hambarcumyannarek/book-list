@@ -97,6 +97,7 @@ function App() {
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
             </button>
           </div>
+          <div className={styles.count}>Showing {books.length} of {allBooks.length} books</div>
         </div>
       </header>
 
