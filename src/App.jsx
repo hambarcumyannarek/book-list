@@ -13,6 +13,7 @@ function App() {
   const [category, setCategory] = useState('All')
   const [selected, setSelected] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -21,6 +22,27 @@ function App() {
 
   useEffect(() => {
     AOS.init({ duration: 700, once: true, easing: 'ease-out' })
+  }, [])
+
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const { scrollHeight, clientHeight } = document.documentElement
+      const totalScrollable = Math.max(scrollHeight - clientHeight, 1)
+      const progress = (window.scrollY / totalScrollable) * 100
+      setScrollProgress(progress)
+    }
+
+    // Initialize on mount
+    updateProgress()
+
+    // Use passive scroll listener for performance
+    window.addEventListener('scroll', updateProgress, { passive: true })
+    window.addEventListener('resize', updateProgress)
+    return () => {
+      window.removeEventListener('scroll', updateProgress)
+      window.removeEventListener('resize', updateProgress)
+    }
   }, [])
 
 
@@ -53,7 +75,7 @@ function App() {
 
   return (
     <div className={styles.app}>
-      <div className={styles.progress} style={{ width: `${(typeof window !== 'undefined' ? (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100 : 0)}%` }} />
+      <div className={styles.progress} style={{ width: `${scrollProgress}%` }} />
       <header className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroInner}>
