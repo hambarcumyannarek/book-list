@@ -30,6 +30,8 @@
   border: 1px solid rgba(255,255,255,0.1);
   background: rgba(0,0,0,0.35);
   color: #e7f6ff;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
 }
 
 .body {
@@ -62,6 +64,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  user-select: none;
 }
 
 .track {
@@ -88,25 +91,31 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.15);
   color: #e7f6ff;
   background: rgba(0,0,0,0.3);
   z-index: 100;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .12s ease;
 }
 
 .navPrev { left: 8px; }
 .navNext { right: 8px; }
 
-.dots { display: flex; gap: 6px; justify-content: center; margin-top: 10px; }
+.dots { display: flex; gap: 6px;  justify-content: center; margin-top: 10px; }
 .dot, .dotActive {
-  width: 8px; height: 8px; border-radius: 50%; border: none;
+  width: 12px; height: 12px; border-radius: 50%; border: none;
   background: rgba(255,255,255,0.35);
   flex-shrink: 0;
 }
-.dotActive { background: #59d0ff; box-shadow: 0 0 10px rgba(0,179,255,0.7); }
+  .dotActive { background: #59d0ff;flex-shrink: 0;  box-shadow: 0 0 10px rgba(0,179,255,0.7); }
+
+.dot, .dotActive { cursor: pointer; transition: transform .12s ease, box-shadow .15s ease; }
+.dot:hover { transform: scale(1.05); }
+.dot:focus-visible { outline: 2px solid #59d0ff; outline-offset: 2px; }
 
 .fullscreenBtn {
   position: absolute;
@@ -120,6 +129,7 @@
   border: 1px solid rgba(255,255,255,0.1);
   background: rgba(0,0,0,0.35);
   color: #e7f6ff;
+  z-index: 100;
   cursor: pointer;
 }
 
@@ -174,6 +184,41 @@
   font-weight: 700;
   text-decoration: none;
 }
+
+/* Unify button look/feel for anchors and buttons */
+.pdfBtn, .amazonBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  line-height: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.pdfBtn:hover, .amazonBtn:hover { transform: translateY(-1px); filter: saturate(1.05); }
+.pdfBtn:active, .amazonBtn:active { transform: translateY(0); }
+.pdfBtn:focus-visible, .amazonBtn:focus-visible { outline: 2px solid rgba(89,208,255,0.8); outline-offset: 2px; }
+
+/* Brand-tinted shadow accents */
+.pdfBtn { box-shadow: 0 8px 22px rgba(0,211,137,0.22); }
+.amazonBtn { box-shadow: 0 8px 22px rgba(0,179,255,0.22); }
+
+/* Disabled state */
+.amazonBtn[disabled], .amazonBtn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.15) saturate(0.8);
+  box-shadow: none;
+}
+.amazonBtn[disabled]:hover, .amazonBtn[aria-disabled="true"]:hover { transform: none; }
 
 
 
