@@ -4,12 +4,14 @@ import { IoIosClose } from 'react-icons/io'
 import { AiOutlineExpand } from 'react-icons/ai'
 import styles from './BookModal.module.scss'
 import ImageGalleryModal from './ImageGalleryModal'
-import { linkIsArray } from '../utils/util'
+import PdfPreviewModal from './PdfPreviewModal'
+import { linkIsArray, lockBodyScroll, unlockBodyScroll } from '../utils/util'
 import placeholder from '../assets/images/placeholder.svg'
 
 export default function BookModal({ book, isOpen, onClose }) {
   const [index, setIndex] = useState(0)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [isPdfOpen, setIsPdfOpen] = useState(false)
   const [galleryIndex, setGalleryIndex] = useState(0)
 
   const images = useMemo(() => book?.images || [], [book])
@@ -28,6 +30,13 @@ export default function BookModal({ book, isOpen, onClose }) {
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
   }, [isOpen, onClose, prev, next])
+
+  useEffect(() => {
+    if (isOpen) {
+      lockBodyScroll()
+      return () => unlockBodyScroll()
+    }
+  }, [isOpen])
 
   
 
@@ -114,9 +123,14 @@ export default function BookModal({ book, isOpen, onClose }) {
                   <p className={styles.summary}>{book.summary}</p>
                   <div className={styles.actions}>
                     {book.pdf && (
-                      <a className={styles.pdfBtn} href={book.pdf} download>
-                        Download PDF
-                      </a>
+                      <>
+                        <a className={styles.pdfBtn} href={book.pdf} download>
+                          Download PDF
+                        </a>
+                        <button className={styles.amazonBtn} onClick={() => setIsPdfOpen(true)}>
+                          Preview PDF
+                        </button>
+                      </>
                     )}
                     {linkIsArray(book.amazon) ? (
                       <>
@@ -146,6 +160,12 @@ export default function BookModal({ book, isOpen, onClose }) {
         isOpen={isGalleryOpen}
         initialIndex={galleryIndex}
         onClose={() => setIsGalleryOpen(false)}
+      />
+      <PdfPreviewModal
+        src={book?.pdf}
+        isOpen={isPdfOpen}
+        onClose={() => setIsPdfOpen(false)}
+        title={book?.title}
       />
       
     </>

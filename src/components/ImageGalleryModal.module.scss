@@ -26,8 +26,9 @@
     width: 36px;
     height: 36px;
     border-radius: 10px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255,255,255,0.1);
     background: rgba(0,0,0,0.35);
     color: #e7f6ff;
@@ -69,7 +70,7 @@
   .navPrev { left: 10px; }
   .navNext { right: 10px; }
   
-  .dots { display: flex; gap: 8px; justify-content: center; padding: 10px 0 14px; }
+  .dots { display: flex; gap: 8px; flex-shrink: 0; justify-content: center; padding: 10px 0 14px; }
   .dot, .dotActive { width: 10px; height: 10px; border-radius: 50%; border: none; background: rgba(255,255,255,0.35); }
   .dotActive { background: #59d0ff; box-shadow: 0 0 10px rgba(0,179,255,0.7); }
   

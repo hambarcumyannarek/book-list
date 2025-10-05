@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { IoIosClose } from 'react-icons/io'
+import { lockBodyScroll, unlockBodyScroll } from '../utils/util'
 import styles from './ImageGalleryModal.module.scss'
 import placeholder from '../assets/images/placeholder.svg'
 
@@ -14,6 +15,13 @@ export default function ImageGalleryModal({ images: inputImages, isOpen, initial
     setIndex(Math.min(Math.max(initialIndex, 0), Math.max(images.length - 1, 0)))
     setZoomed(false)
   }, [isOpen, initialIndex, images.length])
+
+  useEffect(() => {
+    if (isOpen) {
+      lockBodyScroll()
+      return () => unlockBodyScroll()
+    }
+  }, [isOpen])
 
   const prev = useCallback(() => {
     if (images.length === 0) return

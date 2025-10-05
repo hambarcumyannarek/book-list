@@ -1,0 +1,53 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: grid;
+  place-items: center;
+  z-index: 120;
+}
+
+.modal {
+  width: min(1200px, 96vw);
+  height: min(92vh, 900px);
+  background: rgba(8,10,14,0.88);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+  display: grid;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.35);
+  color: #e7f6ff;
+  z-index: 2;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.25);
+}
+
+.fallback { display: grid; place-items: center; color: #e7f6ff; height: 100%; }
+
+

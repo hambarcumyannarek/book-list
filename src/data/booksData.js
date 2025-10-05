@@ -142,12 +142,67 @@ import howInternetWorks2 from "../assets/images/how-internet-work2.png"
 
 import howInternetWorksPdf from "../assets/pdfs/how-internet-work.pdf"
 
+
+import buildingMicroservices1 from "../assets/images/building-microservices1.png"
+import buildingMicroservices2 from "../assets/images/building-microservices2.png"
+import buildingMicroservices3 from "../assets/images/building-microservices3.png"
+import buildingMicroservices4 from "../assets/images/building-microservices4.png"
+import buildingMicroservicesPdf from "../assets/pdfs/building-microservices.pdf"
+
+import buildingMicroFrontends1 from "../assets/images/building-micro-frontends1.png"
+import buildingMicroFrontends2 from "../assets/images/building-micro-frontends2.png"
+import buildingMicroFrontends3 from "../assets/images/building-micro-frontends3.png"
+import buildingMicroFrontends4 from "../assets/images/building-micro-frontends4.png"
+import buildingMicroFrontends5 from "../assets/images/building-micro-frontends5.png"
+import buildingMicroFrontends6 from "../assets/images/building-micro-frontends6.png"
+import buildingMicroFrontendsPdf from "../assets/pdfs/building-micro-frontends.pdf"
+
+import operatingSystemConcepts1 from "../assets/images/operating-system-concepts1.png"
+import operatingSystemConcepts2 from "../assets/images/operating-system-concepts2.png"
+import operatingSystemConcepts3 from "../assets/images/operating-system-concepts3.png"
+import operatingSystemConcepts4 from "../assets/images/operating-system-concepts4.png"
+import operatingSystemConcepts5 from "../assets/images/operating-system-concepts5.png"
+import operatingSystemConcepts6 from "../assets/images/operating-system-concepts6.png"
+import operatingSystemConcepts7 from "../assets/images/operating-system-concepts7.png"
+import operatingSystemConceptsPdf from "../assets/pdfs/operating-system-concepts.pdf"
+
+
+
 import dots from "../assets/images/dots.png"
 
 
 
 export const books = [
+  {
+    title: "Code: The Hidden Language of Computer Hardware and Software (2nd Edition)",
+    author: "Charles Petzold",
+    summary: "An engaging exploration of how computers work from the ground up — from simple circuits and Morse code to modern operating systems.",
+    images: [
+      code1,
+      code2,
+    ],
+    pdf: codePdf,
+    amazon: "https://www.amazon.com/dp/0137909101",
+    rating: 5,
+    category: "Technology"
+  },  
 
+  {
+    title: "Object-Oriented Analysis and Design with Applications (3rd Edition)",
+    author: "Grady Booch",
+    summary: "A foundational guide to object-oriented concepts, modeling, and software design — blending theory with practical application.",
+    images: [
+      OOAD1,
+      OOAD2,
+      OOAD3,
+      OOAD4,
+      OOAD5,
+    ],
+    pdf: OOADPdf,
+    amazon: "https://www.amazon.com/dp/020189551X",
+    rating: 5,
+    category: "Software Engineering"
+  },
   {
     title: "Designing Data-Intensive Applications",
     author: "Martin Kleppmann",
@@ -165,6 +220,57 @@ export const books = [
     amazon: "https://www.amazon.com/dp/1449373321",
     rating: 5,
     category: "Technology"
+  },
+  {
+    title: "Building Microservices: Designing Fine-Grained Systems",
+    author: "Sam Newman",
+    summary: "A definitive guide to designing, building, and maintaining microservice architectures that promote scalability, resilience, and organizational agility.",
+    images: [
+      buildingMicroservices1,
+      buildingMicroservices2,
+      buildingMicroservices3,
+      buildingMicroservices4,
+    ],
+    pdf: buildingMicroservicesPdf,
+    amazon: "https://www.amazon.com/dp/1492034029",
+    rating: 5,
+    category: "Software Architecture"
+  },
+
+  {
+    title: "Building Micro-Frontends: Scaling Teams and Projects, Empowering Developers",
+    author: "Luca Mezzalira",
+    summary: "A comprehensive guide to designing and implementing micro-frontend architectures that enhance scalability, autonomy, and developer productivity in large applications.",
+    images: [
+      buildingMicroFrontends1,
+      buildingMicroFrontends2,
+      buildingMicroFrontends3,
+      buildingMicroFrontends4,
+      buildingMicroFrontends5,
+      buildingMicroFrontends6,
+    ],
+    pdf: buildingMicroFrontendsPdf,
+    amazon: ["https://www.amazon.com/dp/1492082996", "https://www.amazon.com/dp/1098170784"],
+    rating: 4,
+    category: "Software Architecture"
+  },
+  {
+    title: "Operating System Concepts (10th Edition)",
+    author: "Abraham Silberschatz, Peter B. Galvin, Greg Gagne",
+    summary: "A classic textbook that provides a thorough introduction to modern operating system principles, architecture, and design concepts used in real-world systems.",
+    images: [
+      operatingSystemConcepts1,
+      operatingSystemConcepts2,
+      operatingSystemConcepts3,
+      operatingSystemConcepts4,
+      operatingSystemConcepts5,
+      operatingSystemConcepts6,
+      operatingSystemConcepts7
+    ],
+    pdf: operatingSystemConceptsPdf,
+    amazon: "https://www.amazon.com/dp/1119456339",
+    rating: 5,
+    category: "Computer Science"
   },
 
   {
@@ -186,21 +292,6 @@ export const books = [
   },
 
   {
-    title: "Code: The Hidden Language of Computer Hardware and Software (2nd Edition)",
-    author: "Charles Petzold",
-    summary: "An engaging exploration of how computers work from the ground up — from simple circuits and Morse code to modern operating systems.",
-    images: [
-      code1,
-      code2,
-    ],
-    pdf: codePdf,
-    amazon: "https://www.amazon.com/dp/0137909101",
-    rating: 5,
-    category: "Technology"
-  },  
-
-
-  {
     title: "How Linux Works, 3rd Edition: What Every Superuser Should Know",
     author: "Brian Ward",
     summary: "A clear and practical guide that explains how Linux systems work from the inside out — essential knowledge for every serious user and admin.",
@@ -214,23 +305,6 @@ export const books = [
     category: "Technology"
   },
 
-
-  {
-    title: "Object-Oriented Analysis and Design with Applications (3rd Edition)",
-    author: "Grady Booch",
-    summary: "A foundational guide to object-oriented concepts, modeling, and software design — blending theory with practical application.",
-    images: [
-      OOAD1,
-      OOAD2,
-      OOAD3,
-      OOAD4,
-      OOAD5,
-    ],
-    pdf: OOADPdf,
-    amazon: "https://www.amazon.com/dp/020189551X",
-    rating: 5,
-    category: "Software Engineering"
-  },
 
   {
     title: "The Linux Command Line, 2nd Edition: A Complete Introduction",
@@ -352,7 +426,7 @@ export const books = [
       howComputersRealyWork2,
     ],
     pdf: howComputersRealyWorkPdf,
-    amazon: "https://www.amazon.com/dp/1593279649",
+    amazon: "https://www.amazon.com/dp/1718500661",
     rating: 4,
     category: "Computer Science"
   },
@@ -386,7 +460,7 @@ export const books = [
       
     ],
     pdf: bugHuntingPdf,
-    amazon: "https://www.amazon.com/dp/1981832709",
+    amazon: "https://www.amazon.com/dp/1593278616",
     rating: 4,
     category: "Cybersecurity"
   },
