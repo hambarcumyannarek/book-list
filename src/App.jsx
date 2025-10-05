@@ -23,17 +23,26 @@ function App() {
     AOS.init({ duration: 700, once: true, easing: 'ease-out' })
   }, [])
 
-  const categories = useMemo(() => ['All', ...Array.from(new Set(allBooks.map(b => b.category || 'Other')))], [])
+
+  const categories = useMemo(
+    () => ['All', ...Array.from(new Set(allBooks.map(b => b.category || 'Other')))],
+    []
+  )
+
 
   const books = useMemo(() => {
     return allBooks
       .filter(b => {
-        const matchesQuery = [b.title, b.author, b.summary].some(x => x.toLowerCase().includes(query.toLowerCase()))
+        const matchesQuery = [b.title, b.author, b.summary]
+          .some(x => x.toLowerCase().includes(query.toLowerCase()))
+  
         const matchesCategory = category === 'All' || b.category === category
+  
         return matchesQuery && matchesCategory
       })
       .sort((a, b) => (b.rating || 0) - (a.rating || 0))
   }, [query, category])
+  
 
   const openModal = (book) => {
     setSelected(book)

@@ -171,416 +171,239 @@ import operatingSystemConceptsPdf from "../assets/pdfs/operating-system-concepts
 import dots from "../assets/images/dots.png"
 
 
-
 export const books = [
   {
     title: "Code: The Hidden Language of Computer Hardware and Software (2nd Edition)",
     author: "Charles Petzold",
     summary: "An engaging exploration of how computers work from the ground up — from simple circuits and Morse code to modern operating systems.",
-    images: [
-      code1,
-      code2,
-    ],
+    images: [code1, code2],
     pdf: codePdf,
     amazon: "https://www.amazon.com/dp/0137909101",
     rating: 5,
-    category: "Technology"
-  },  
-
+    category: "Programming & Development Practice",
+  },
   {
     title: "Object-Oriented Analysis and Design with Applications (3rd Edition)",
     author: "Grady Booch",
     summary: "A foundational guide to object-oriented concepts, modeling, and software design — blending theory with practical application.",
-    images: [
-      OOAD1,
-      OOAD2,
-      OOAD3,
-      OOAD4,
-      OOAD5,
-    ],
+    images: [OOAD1, OOAD2, OOAD3, OOAD4, OOAD5],
     pdf: OOADPdf,
     amazon: "https://www.amazon.com/dp/020189551X",
     rating: 5,
-    category: "Software Engineering"
+    category: "Software Engineering & Design",
   },
   {
     title: "Designing Data-Intensive Applications",
     author: "Martin Kleppmann",
     summary: "The big ideas behind reliable, scalable, and maintainable systems.",
-    images: [
-      dataIntensive1,
-      dataIntensive2,
-      dataIntensive3,
-      dataIntensive4,
-      dataIntensive5,
-      dataIntensive6,
-      dataIntensive7
-    ],
+    images: [dataIntensive1, dataIntensive2, dataIntensive3, dataIntensive4, dataIntensive5, dataIntensive6, dataIntensive7],
     pdf: dataIntensivePdf,
     amazon: "https://www.amazon.com/dp/1449373321",
     rating: 5,
-    category: "Technology"
+    category: "Software Architecture & Scalability",
   },
   {
     title: "Building Microservices: Designing Fine-Grained Systems",
     author: "Sam Newman",
     summary: "A definitive guide to designing, building, and maintaining microservice architectures that promote scalability, resilience, and organizational agility.",
-    images: [
-      buildingMicroservices1,
-      buildingMicroservices2,
-      buildingMicroservices3,
-      buildingMicroservices4,
-    ],
+    images: [buildingMicroservices1, buildingMicroservices2, buildingMicroservices3, buildingMicroservices4],
     pdf: buildingMicroservicesPdf,
     amazon: "https://www.amazon.com/dp/1492034029",
     rating: 5,
-    category: "Software Architecture"
+    category: "Software Architecture & Scalability",
   },
-
   {
-    title: "Building Micro-Frontends: Scaling Teams and Projects, Empowering Developers",
+    title: "Building Micro-Frontends",
     author: "Luca Mezzalira",
-    summary: "A comprehensive guide to designing and implementing micro-frontend architectures that enhance scalability, autonomy, and developer productivity in large applications.",
-    images: [
-      buildingMicroFrontends1,
-      buildingMicroFrontends2,
-      buildingMicroFrontends3,
-      buildingMicroFrontends4,
-      buildingMicroFrontends5,
-      buildingMicroFrontends6,
-    ],
+    summary: "A comprehensive guide to designing and implementing micro-frontend architectures that enhance scalability and developer productivity.",
+    images: [buildingMicroFrontends1, buildingMicroFrontends2, buildingMicroFrontends3, buildingMicroFrontends4, buildingMicroFrontends5, buildingMicroFrontends6],
     pdf: buildingMicroFrontendsPdf,
     amazon: ["https://www.amazon.com/dp/1492082996", "https://www.amazon.com/dp/1098170784"],
     rating: 4,
-    category: "Software Architecture"
+    category: "Software Architecture & Scalability",
   },
   {
     title: "Operating System Concepts (10th Edition)",
     author: "Abraham Silberschatz, Peter B. Galvin, Greg Gagne",
-    summary: "A classic textbook that provides a thorough introduction to modern operating system principles, architecture, and design concepts used in real-world systems.",
-    images: [
-      operatingSystemConcepts1,
-      operatingSystemConcepts2,
-      operatingSystemConcepts3,
-      operatingSystemConcepts4,
-      operatingSystemConcepts5,
-      operatingSystemConcepts6,
-      operatingSystemConcepts7
-    ],
+    summary: "A classic textbook that provides a thorough introduction to modern operating system principles, architecture, and design.",
+    images: [operatingSystemConcepts1, operatingSystemConcepts2, operatingSystemConcepts3, operatingSystemConcepts4, operatingSystemConcepts5, operatingSystemConcepts6, operatingSystemConcepts7],
     pdf: operatingSystemConceptsPdf,
     amazon: "https://www.amazon.com/dp/1119456339",
     rating: 5,
-    category: "Computer Science"
+    category: "Computer Science Fundamentals",
   },
-
   {
     title: "Grokking Algorithms",
     author: "Aditya Y. Bhargava",
-    summary: "A friendly, illustrated introduction to algorithms that uses visual examples and clear, step-by-step explanations.",
-    images: [
-      grokkingAlgorithms1,
-      grokkingAlgorithms2,
-      grokkingAlgorithms3,
-      grokkingAlgorithms4,
-      grokkingAlgorithms5,
-      grokkingAlgorithms6
-    ],
+    summary: "A friendly, illustrated introduction to algorithms that uses visual examples and clear explanations.",
+    images: [grokkingAlgorithms1, grokkingAlgorithms2, grokkingAlgorithms3, grokkingAlgorithms4, grokkingAlgorithms5, grokkingAlgorithms6],
     pdf: grokkingAlgorithmsPdf,
     amazon: "https://www.amazon.com/dp/1633438538",
     rating: 4,
-    category: "Technology"
+    category: "Computer Science Fundamentals",
   },
-
   {
-    title: "How Linux Works, 3rd Edition: What Every Superuser Should Know",
+    title: "How Linux Works, 3rd Edition",
     author: "Brian Ward",
-    summary: "A clear and practical guide that explains how Linux systems work from the inside out — essential knowledge for every serious user and admin.",
-    images: [
-      howLinuxWorks1,
-      howLinuxWorks2,
-    ],
+    summary: "A clear and practical guide that explains how Linux systems work from the inside out.",
+    images: [howLinuxWorks1, howLinuxWorks2],
     pdf: howLinuxWorksPdf,
     amazon: "https://www.amazon.com/dp/1718500408",
     rating: 5,
-    category: "Technology"
+    category: "System & Network Administration",
   },
-
-
   {
-    title: "The Linux Command Line, 2nd Edition: A Complete Introduction",
+    title: "The Linux Command Line, 2nd Edition",
     author: "William Shotts",
-    summary: "A comprehensive and beginner-friendly guide to mastering the Linux command line through practical examples and clear explanations.",
-    images: [
-      linuxCommandLine1,
-      linuxCommandLine2,
-      linuxCommandLine3,
-      
-    ],
+    summary: "A comprehensive and beginner-friendly guide to mastering the Linux command line.",
+    images: [linuxCommandLine1, linuxCommandLine2, linuxCommandLine3],
     pdf: linuxCommandLinePdf,
     amazon: "https://www.amazon.com/dp/1593279523",
     rating: 5,
-    category: "Technology"
+    category: "System & Network Administration",
   },
-
   {
     title: "Modern Operating Systems (4th Edition)",
     author: "Andrew S. Tanenbaum",
-    summary: "A comprehensive exploration of modern operating system principles, architectures, and real-world implementations used in today’s computing environments.",
-    images: [
-      modernOs1,
-      modernOs2,
-      modernOs3,
-      modernOs4,
-      modernOs5,
-      modernOs6,
-      modernOs7,
-      modernOs8,
-      modernOs9,
-      modernOs10,
-      modernOs11,
-      modernOs12,
-      modernOs13,
-      modernOs14,
-      modernOs15,
-      modernOs16,
-      modernOs17,
-    ],
+    summary: "A comprehensive exploration of modern operating system principles and real-world implementations.",
+    images: [modernOs1, modernOs2, modernOs3, modernOs4, modernOs5, modernOs6, modernOs7, modernOs8, modernOs9, modernOs10, modernOs11, modernOs12, modernOs13, modernOs14, modernOs15, modernOs16, modernOs17],
     pdf: modernOsPdf,
     amazon: "https://www.amazon.com/dp/013359162X",
     rating: 5,
-    category: "Computer Science"
+    category: "Computer Science Fundamentals",
   },
-
   {
-    title: "Algorithmic Thinking, 2nd Edition: Learn Algorithms to Level Up Your Coding Skills",
+    title: "Algorithmic Thinking (2nd Edition)",
     author: "Daniel Zingaro",
-    summary: "An engaging, hands-on guide to understanding and implementing algorithms — designed to strengthen problem-solving and programming skills.",
-    images: [
-      algorithmicThinking1,
-      algorithmicThinking2,
-    ],
+    summary: "A hands-on guide to understanding and implementing algorithms.",
+    images: [algorithmicThinking1, algorithmicThinking2],
     pdf: algorithmicThinkingPdf,
     amazon: "https://www.amazon.com/dp/1718503229",
     rating: 4,
-    category: "Technology"
+    category: "Interview & Career Prep",
   },
-
   {
     title: "Design Patterns: Elements of Reusable Object-Oriented Software",
     author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
-    summary: "A timeless classic introducing the 23 essential design patterns that revolutionized object-oriented software development and architecture.",
-    images: [
-      designPatterns1,
-      designPatterns2,
-      designPatterns3,
-      designPatterns4,
-    ],
+    summary: "A timeless classic introducing 23 essential design patterns that revolutionized OOP development.",
+    images: [designPatterns1, designPatterns2, designPatterns3, designPatterns4],
     pdf: designPatternsPdf,
     amazon: "https://www.amazon.com/dp/0201633612",
     rating: 5,
-    category: "Software Engineering"
+    category: "Software Engineering & Design",
   },
-
-
   {
     title: "Bug Bounty Bootcamp: The Guide to Finding and Reporting Web Vulnerabilities",
     author: "Vickie Li",
-    summary: "A practical, step-by-step guide to discovering and responsibly reporting security vulnerabilities in web applications.",
-    images: [
-      webVulnerabilities1,
-      webVulnerabilities2,
-      webVulnerabilities3,
-    ],
+    summary: "A practical guide to discovering and reporting security vulnerabilities in web applications.",
+    images: [webVulnerabilities1, webVulnerabilities2, webVulnerabilities3],
     pdf: webVulnerabilitiesPdf,
     amazon: "https://www.amazon.com/dp/1718501544",
     rating: 4,
-    category: "Cybersecurity"
+    category: "Cybersecurity & Ethical Hacking",
   },
-
-
   {
-    title: "Cracking the Coding Interview: 189 Programming Questions and Solutions (6th Edition)",
+    title: "Cracking the Coding Interview (6th Edition)",
     author: "Gayle Laakmann McDowell",
-    summary: "A comprehensive guide to acing technical interviews with 189 carefully crafted coding questions and detailed solutions.",
-    images: [
-      crackingCoding1,
-      crackingCoding2,
-      crackingCoding3,
-      crackingCoding4,
-      crackingCoding5,
-      crackingCoding6,
-    ],
+    summary: "A comprehensive guide to acing technical interviews with 189 coding questions and solutions.",
+    images: [crackingCoding1, crackingCoding2, crackingCoding3, crackingCoding4, crackingCoding5, crackingCoding6],
     pdf: crackingCodingPdf,
     amazon: "https://www.amazon.com/dp/0984782850",
     rating: 5,
-    category: "Technology"
+    category: "Interview & Career Prep",
   },
-
-
   {
-    title: "How Computers Really Work: A Hands-On Guide to the Inner Workings of the Machine",
+    title: "How Computers Really Work",
     author: "Matthew Justice",
-    summary: "A practical, hands-on introduction to the fundamentals of computer architecture, exploring how hardware and software interact at a low level.",
-    images: [
-      howComputersRealyWork1,
-      howComputersRealyWork2,
-    ],
+    summary: "A hands-on guide to computer architecture, exploring how hardware and software interact.",
+    images: [howComputersRealyWork1, howComputersRealyWork2],
     pdf: howComputersRealyWorkPdf,
     amazon: "https://www.amazon.com/dp/1718500661",
     rating: 4,
-    category: "Computer Science"
+    category: "Computer Science Fundamentals",
   },
-
-
   {
-    title: "The Pragmatic Programmer: Your Journey To Mastery, 20th Anniversary Edition (2nd Edition)",
+    title: "The Pragmatic Programmer (20th Anniversary Edition)",
     author: "David Thomas, Andrew Hunt",
-    summary: "A modern classic that offers practical advice, best practices, and timeless strategies for software developers seeking mastery and craftsmanship.",
-    images: [
-      pragmaticProgrammer1,
-      pragmaticProgrammer2,
-      pragmaticProgrammer3,
-      pragmaticProgrammer4,
-      
-    ],
+    summary: "A modern classic offering timeless strategies and best practices for software developers.",
+    images: [pragmaticProgrammer1, pragmaticProgrammer2, pragmaticProgrammer3, pragmaticProgrammer4],
     pdf: pragmaticProgrammerPdf,
     amazon: "https://www.amazon.com/dp/0135957052",
     rating: 5,
-    category: "Software Engineering"
+    category: "Programming & Development Practice",
   },
-
   {
-    title: "Real-World Bug Hunting: A Field Guide to Web Hacking",
+    title: "Real-World Bug Hunting",
     author: "Peter Yaworski",
-    summary: "A hands-on guide to discovering, exploiting, and reporting web vulnerabilities, drawing from real-world examples and case studies.",
-    images: [
-      bugHunting1,
-      bugHunting2,
-      bugHunting3,
-      
-    ],
+    summary: "A hands-on guide to discovering and reporting web vulnerabilities.",
+    images: [bugHunting1, bugHunting2, bugHunting3],
     pdf: bugHuntingPdf,
     amazon: "https://www.amazon.com/dp/1593278616",
     rating: 4,
-    category: "Cybersecurity"
+    category: "Cybersecurity & Ethical Hacking",
   },
-
   {
     title: "System Design Interview – An Insider's Guide",
     author: "Alex Xu",
-    summary: "A practical guide for preparing for system design interviews, offering strategies, examples, and real-world case studies to succeed in technical interviews.",
-    images: [
-      systemDesignInterview1,
-      systemDesignInterview2,
-      
-    ],
+    summary: "A practical guide to preparing for system design interviews with real-world examples.",
+    images: [systemDesignInterview1, systemDesignInterview2],
     pdf: systemDesignInterviewPdf,
-    amazon: ["https://www.amazon.com/dp/B08CMF2CQF",
-      "https://www.amazon.com/dp/1736049119",
-    ],
+    amazon: ["https://www.amazon.com/dp/B08CMF2CQF", "https://www.amazon.com/dp/1736049119"],
     rating: 5,
-    category: "Technology"
+    category: "Software Architecture & Scalability",
   },
-
-
   {
     title: "Clean Code: A Handbook of Agile Software Craftsmanship",
     author: "Robert C. Martin",
-    summary: "A seminal guide to writing readable, maintainable, and efficient code with practical examples and best practices for professional software development.",
-    images: [
-      cleanCode1,
-      cleanCode2,
-      cleanCode3,
-      cleanCode4,
-      cleanCode5,
-      cleanCode6,
-      cleanCode7,
-      cleanCode8,
-      cleanCode9,
-      cleanCode10,
-      cleanCode11,
-      cleanCode12,
-    ],
+    summary: "A guide to writing clean, maintainable, and professional code.",
+    images: [cleanCode1, cleanCode2, cleanCode3, cleanCode4, cleanCode5, cleanCode6, cleanCode7, cleanCode8, cleanCode9, cleanCode10, cleanCode11, cleanCode12],
     pdf: cleanCodePdf,
-    amazon: [
-      "https://www.amazon.com/dp/0132350882",
-      "https://www.amazon.com/dp/0135398576",
-    ],
+    amazon: ["https://www.amazon.com/dp/0132350882", "https://www.amazon.com/dp/0135398576"],
     rating: 5,
-    category: "Software Engineering"
+    category: "Software Engineering & Design",
   },
-
   {
     title: "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
     author: "Robert C. Martin",
-    summary: "A practical guide to building robust, maintainable, and scalable software systems using proven architectural principles and best practices.",
-    images: [
-      cleanArchitecture1,
-      cleanArchitecture2,
-      cleanArchitecture3,
-      cleanArchitecture4,
-      cleanArchitecture5,
-      cleanArchitecture6,
-      cleanArchitecture7,
-      cleanArchitecture8,
-      cleanArchitecture9,
-    ],
+    summary: "A guide to building robust, maintainable, and scalable software systems.",
+    images: [cleanArchitecture1, cleanArchitecture2, cleanArchitecture3, cleanArchitecture4, cleanArchitecture5, cleanArchitecture6, cleanArchitecture7, cleanArchitecture8, cleanArchitecture9],
     pdf: cleanArchitecturePdf,
     amazon: "https://www.amazon.com/dp/0134494164",
     rating: 5,
-    category: "Software Engineering"
-  } ,
-
+    category: "Software Engineering & Design",
+  },
   {
     title: "UNIX and Linux System Administration Handbook (5th Edition)",
-    author: "Evi Nemeth, Garth Snyder, Trent Hein, Ben Whaley, Dan Mackin",
-    summary: "A comprehensive and authoritative guide to UNIX and Linux system administration, covering practical techniques, best practices, and modern system management tools.",
-    images: [
-      unixLinuxAdmin1,
-      unixLinuxAdmin2,
-      unixLinuxAdmin3,
-      unixLinuxAdmin4,
-      dots,
-      unixLinuxAdmin5,
-    ],
+    author: "Evi Nemeth, et al.",
+    summary: "A comprehensive guide to UNIX and Linux system administration and modern tools.",
+    images: [unixLinuxAdmin1, unixLinuxAdmin2, unixLinuxAdmin3, unixLinuxAdmin4, dots, unixLinuxAdmin5],
     pdf: unixLinuxAdminPdf,
     amazon: "https://www.amazon.com/dp/0134277554",
     rating: 5,
-    category: "Technology"
+    category: "System & Network Administration",
   },
-
-
   {
     title: "The TCP/IP Guide: A Comprehensive, Illustrated Internet Protocols Reference",
     author: "Charles M. Kozierok",
-    summary: "An in-depth, illustrated reference for understanding TCP/IP protocols, networking concepts, and the underlying mechanics of the Internet.",
-    images: [
-      tcpIpGuide1,
-    ],
+    summary: "An in-depth reference for understanding TCP/IP protocols and the Internet.",
+    images: [tcpIpGuide1],
     pdf: tcpIpGuidePdf,
     amazon: "https://www.amazon.com/dp/159327047X",
     rating: 5,
-    category: "Networking"
+    category: "System & Network Administration",
   },
-
-
   {
     title: "How the Internet Really Works",
     author: "ARTICLE 19 & Catnip",
-    summary: "An insightful guide explaining the inner workings of the Internet in an accessible and engaging way, covering key concepts, protocols, and infrastructure.",
-    images: [
-      howInternetWorks1,
-      
-      howInternetWorks2
-    ],
+    summary: "An accessible guide explaining how the Internet works — protocols, infrastructure, and concepts.",
+    images: [howInternetWorks1, howInternetWorks2],
     pdf: howInternetWorksPdf,
     amazon: "https://www.amazon.com/dp/1718500297",
     rating: 4,
-    category: "Technology"
-  }
-  
-  
-]
+    category: "System & Network Administration",
+  },
+];
+
 
 export default books
 
