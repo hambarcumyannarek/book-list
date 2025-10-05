@@ -5,7 +5,7 @@ import { AiOutlineExpand } from 'react-icons/ai'
 import styles from './BookModal.module.scss'
 import ImageGalleryModal from './ImageGalleryModal'
 import PdfPreviewModal from './PdfPreviewModal'
-import { linkIsArray, lockBodyScroll, unlockBodyScroll } from '../utils/util'
+import { linkIsArray, hasLink, lockBodyScroll, unlockBodyScroll } from '../utils/util'
 import placeholder from '../assets/images/placeholder.svg'
 
 export default function BookModal({ book, isOpen, onClose }) {
@@ -132,7 +132,7 @@ export default function BookModal({ book, isOpen, onClose }) {
                         </button>
                       </>
                     )}
-                    {linkIsArray(book.amazon) ? (
+                    {hasLink(book.amazon) && linkIsArray(book.amazon) ? (
                       <>
                         <a className={styles.amazonBtn} href={book.amazon?.[0]} target="_blank" rel="noreferrer">
                           Amazon (1st Edition)
@@ -141,10 +141,14 @@ export default function BookModal({ book, isOpen, onClose }) {
                           Amazon (2nd Edition)
                         </a>
                       </>
-                    ) : (
+                    ) : hasLink(book.amazon) ? (
                       <a className={styles.amazonBtn} href={book.amazon} target="_blank" rel="noreferrer">
                         Buy on Amazon
                       </a>
+                    ) : (
+                      <button className={styles.amazonBtn} disabled aria-disabled="true">
+                        Not available on Amazon
+                      </button>
                     )}
                   </div>
                 </div>

@@ -7,6 +7,12 @@ function getLink(link) {
   return linkIsArray(link) ? link[link.length-1] : link
 }
 
+function hasLink(link) {
+  if (!link) return false
+  if (Array.isArray(link)) return link.some((l) => typeof l === 'string' && l.trim().length > 0)
+  return typeof link === 'string' && link.trim().length > 0
+}
+
 // Body scroll lock with reference counting to support nested modals
 let scrollLockCount = 0
 let previousOverflow = ''
@@ -50,4 +56,4 @@ function unlockBodyScroll() {
   }
 }
 
-export { linkIsArray, getLink, lockBodyScroll, unlockBodyScroll }
+export { linkIsArray, getLink, hasLink, lockBodyScroll, unlockBodyScroll }

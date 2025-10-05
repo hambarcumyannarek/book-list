@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FaStar } from 'react-icons/fa'
 import { AiOutlineEye } from 'react-icons/ai'
 import styles from './BookCard.module.scss'
-import { getLink } from '../utils/util'
+import { getLink, hasLink } from '../utils/util'
 import placeholder from '../assets/images/placeholder.svg'
 
 export default function BookCard({ book, onOpen }) {
@@ -42,9 +42,15 @@ export default function BookCard({ book, onOpen }) {
           <div className={styles.stars} data-hover={isHover}>
             {stars}
           </div>
-          <a className={styles.buyBtn} href={getLink(book.amazon)} target="_blank" rel="noreferrer">
-            Buy on Amazon
-          </a>
+          {hasLink(book.amazon) ? (
+            <a className={styles.buyBtn} href={getLink(book.amazon)} target="_blank" rel="noreferrer">
+              Buy on Amazon
+            </a>
+          ) : (
+            <button className={styles.buyBtn} disabled aria-disabled="true">
+              Not available
+            </button>
+          )}
         </div>
       </div>
     </motion.div>
