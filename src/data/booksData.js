@@ -232,15 +232,43 @@ import writeGreatCode1 from "../assets/images/write-great-code1.png"
 import writeGreatCode2 from "../assets/images/write-great-code2.png"
 import writeGreatCodePdf from "../assets/pdfs/write-great-code.pdf"
 
+// 📚 C Programming Language
+import cProgramming1 from "../assets/images/c-programming1.png"
+import cProgramming2 from "../assets/images/c-programming2.png"
+import cProgramming3 from "../assets/images/c-programming3.png"
+import cProgramming4 from "../assets/images/c-programming4.png"
+import cProgrammingPdf from "../assets/pdfs/c-programming.pdf"
+
+// 📚 C++ Programming Language
+import cppLang1 from "../assets/images/cpp-lang1.png"
+import cppLang2 from "../assets/images/cpp-lang2.png"
+import cppLang3 from "../assets/images/cpp-lang3.png"
+import cppLangPdf from "../assets/pdfs/cpp-lang.pdf"
+
+// 📚 A Tour of C++
+import tourCpp1 from "../assets/images/tour-cpp1.png"
+import tourCpp2 from "../assets/images/tour-cpp2.png"
+import tourCpp3 from "../assets/images/tour-cpp3.png"
+import tourCpp4 from "../assets/images/tour-cpp4.png"
+import tourCpp5 from "../assets/images/tour-cpp5.png"
+import tourCppPdf from "../assets/pdfs/tour-cpp.pdf"
+
+// 📚 Effective C++
+import effectiveCpp1 from "../assets/images/effective-cpp1.png"
+import effectiveCpp2 from "../assets/images/effective-cpp2.png"
+import effectiveCpp3 from "../assets/images/effective-cpp3.png"
+import effectiveCpp4 from "../assets/images/effective-cpp4.png"
+import effectiveCppPdf from "../assets/pdfs/effective-cpp.pdf"
 
 import dots from "../assets/images/dots.png"
 
-  // 📚 Enum-like object for categories
+// 📚 Enum-like object for categories
 export const Categories = Object.freeze({
   PROGRAMMING: "Programming & Development Practice",
+  C_CPP: "C & C++ Programming",
   SOFTWARE_ENGINEERING: "Software Engineering & Design",
   SOFTWARE_ARCHITECTURE: "Software Architecture & Scalability",
-  ALGORITHMS: "Algorithms & Data Structures", // ✨ New category added
+  ALGORITHMS: "Algorithms & Data Structures",
   COMPUTER_SCIENCE: "Computer Science Fundamentals",
   SYSTEM_ADMIN: "System & Network Administration",
   CYBERSECURITY: "Cybersecurity & Ethical Hacking",
@@ -283,6 +311,52 @@ export const books = [
     amazon: "https://www.amazon.com/dp/0135957052",
     rating: 5,
     category: Categories.PROGRAMMING,
+  },
+
+  // ==================== C & C++ PROGRAMMING ====================
+  {
+    title: "C Programming Language, 2nd Edition",
+    author: "Brian W. Kernighan, Dennis M. Ritchie",
+    summary:
+      "The definitive guide to C programming written by the language's creators — a timeless classic that teaches fundamental programming concepts with clarity and precision.",
+    images: [cProgramming1, cProgramming2, cProgramming3, cProgramming4],
+    pdf: cProgrammingPdf,
+    amazon: "https://www.amazon.com/dp/0131103628",
+    rating: 5,
+    category: Categories.C_CPP,
+  },
+
+  {
+    title: "The C++ Programming Language",
+    author: "Bjarne Stroustrup",
+    summary: "Comprehensive reference for C++ covering language features and best practices.",
+    images: [cppLang1, cppLang2, cppLang3],
+    pdf: cppLangPdf,
+    amazon: "https://www.amazon.com/dp/0321563840",
+    rating: 5,
+    category: Categories.C_CPP,
+  },
+
+  {
+    title: "A Tour of C++, 3rd Edition (C++ In-Depth Series)",
+    author: "Bjarne Stroustrup",
+    summary: "Concise overview of modern C++ features for experienced programmers.",
+    images: [tourCpp1, tourCpp2, tourCpp3, tourCpp4, tourCpp5],
+    pdf: tourCppPdf,
+    amazon: "https://www.amazon.com/dp/0321958314",
+    rating: 5,
+    category: Categories.C_CPP,
+  },
+
+  {
+    title: "Effective C++: 55 Specific Ways to Improve Your Programs and Designs, 3rd Edition",
+    author: "Scott Meyers",
+    summary: "Practical guidelines and techniques to write better, safer, and more efficient C++ code.",
+    images: [effectiveCpp1, effectiveCpp2, effectiveCpp3, effectiveCpp4],
+    pdf: effectiveCppPdf,
+    amazon: "https://www.amazon.com/dp/0321334876",
+    rating: 5,
+    category: Categories.C_CPP,
   },
 
   // ==================== SOFTWARE ENGINEERING & DESIGN ====================
